@@ -20,6 +20,9 @@ while True:
             speed = float(input("Current internet speed (mpbs): ")) # 1 Mbps = 0.125 MB/s
             if speed < 0:
                 speed = speed * -1
+            if speed == 0:
+                print("Speed size must be larger than 0")
+                continue
             break
         except ValueError:
             print("You must provide an acceptable value!")
@@ -29,6 +32,9 @@ while True:
             file_size = float(input("MB of data/file that will be downloaded: "))
             if file_size < 0:
                 file_size = file_size * -1
+            if file_size == 0:
+                print("File size must be larger than 0")
+                continue
             break
         except ValueError:
             print("You must provide an acceptable value!")
